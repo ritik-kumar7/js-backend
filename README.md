@@ -19,10 +19,7 @@ backend/
 ├── server.js # App entry point
 └── README.md
 
-yaml
-Copy code
 
----
 
 ## 🧰 Tech Stack
 
@@ -41,25 +38,20 @@ Copy code
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/your-backend-repo.git
+   git clone https://github.com/ritik-kumar7/js-backend.git
    cd your-backend-repo
 Install dependencies
 
-bash
-Copy code
+
 npm install
 Setup environment variables
 Create a .env file in the root directory and add:
 
-bash
-Copy code
 PORT=4000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
 Start the development server
 
-bash
-Copy code
 npm run dev
 (Make sure you have nodemon installed for live reloading.)
 
@@ -75,8 +67,7 @@ GET	/api/data/:id	Get data by ID
 This backend uses JWT (JSON Web Token) for secure authentication.
 Tokens are issued on login and must be included in headers for protected routes:
 
-makefile
-Copy code
+
 Authorization: Bearer <your_token>
 🧠 Features
 ✅ Modular architecture for scalability
@@ -87,14 +78,12 @@ Authorization: Bearer <your_token>
 ✅ RESTful API structure for easy expansion
 
 🧪 Scripts
-bash
-Copy code
+
 npm start      # Start the server
 npm run dev    # Start with nodemon
 npm test       # Run tests (if available)
 📦 Dependencies
-json
-Copy code
+
 {
   "express": "^4.x",
   "mongoose": "^7.x",
