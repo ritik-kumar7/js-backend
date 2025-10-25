@@ -1,0 +1,64 @@
+MERN stack me —
+
+👉 M = MongoDB
+👉 E = Express.js
+👉 R = React.js
+👉 N = Node.js
+
+🔹 Backend kya hota hai?
+
+Backend wo part hota hai jo server pe run karta hai — jahan pe data store, process, aur logic handle hota hai.
+User ko directly backend nahi dikhai deta, lekin frontend uske sath baat karta hai (API ke through).
+
+🔹 MERN ke backend ka part:
+
+MERN stack me backend mainly 2 cheezon se banta hai:
+
+1. Node.js
+
+Ye JavaScript runtime environment hai.
+
+Isse hum server-side code likhte hain (jaise Python/Django ya PHP ki tarah).
+
+Node browser ke bahar JavaScript ko chalata hai.
+
+2. Express.js
+
+Ye Node.js ke upar banaya gaya framework hai.
+
+Iska use karke hum easily API routes, middleware, aur request-response system bana sakte hain.
+
+Example:
+
+const express = require('express');
+const app = express();
+
+app.get('/hello', (req, res) => {
+    res.send('Hello from backend!');
+});
+
+app.listen(4000, () => {
+    console.log('Server running on port 4000');
+});
+
+🔹 Backend ka kaam:
+
+Client requests handle karna (frontend se data lena ya bhejna).
+
+Database se baat karna (MongoDB me data save/fetch/update/delete).
+
+Business logic lagana (for example: login validation, payment check, etc.).
+
+API provide karna frontend ko.
+
+🔹 Example flow (React + Node + MongoDB):
+
+React (frontend) → user form bharta hai.
+
+Axios/fetch se API call hoti hai → http://localhost:4000/api/register.
+
+Express + Node (backend) request receive karta hai.
+
+MongoDB me data store karta hai.
+
+Response send karta hai → “User created successfully”.

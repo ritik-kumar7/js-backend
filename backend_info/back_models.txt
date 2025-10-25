@@ -1,0 +1,42 @@
+🧱 Model kya karta hai?
+
+Model = Schema ka implementation,
+jisse MongoDB me ek collection create hota hai.
+
+Example:
+
+const User = mongoose.model('User', userSchema);
+
+
+👉 Ye line MongoDB me ek "users" collection bana degi.
+
+Ab agar tu Book model banata hai, to "books" collection banegi,
+aur agar Movie model banata hai, to "movies" collection banegi.
+
+example
+
+const mongoose = require('mongoose');
+
+// User Schema & Model
+const userSchema = new mongoose.Schema({
+  username: String,
+  email: String,
+  password: String
+});
+const User = mongoose.model('User', userSchema);
+
+// Book Schema & Model
+const bookSchema = new mongoose.Schema({
+  bookName: String,
+  author: String,
+  price: Number
+});
+const Book = mongoose.model('Book', bookSchema);
+
+// Movie Schema & Model
+const movieSchema = new mongoose.Schema({
+  movieName: String,
+  rating: Number,
+  releaseYear: Number
+});
+const Movie = mongoose.model('Movie', movieSchema);

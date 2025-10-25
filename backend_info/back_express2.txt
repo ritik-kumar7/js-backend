@@ -1,0 +1,71 @@
+Express.js ke Main Concepts
+1️⃣ Routes
+
+Express me routes ka matlab hota hai — alag-alag URL handle karna.
+
+app.get('/', (req, res) => res.send('Home Page'));
+app.get('/about', (req, res) => res.send('About Page'));
+app.post('/login', (req, res) => res.send('Login request received'));
+
+2️⃣ Middleware
+
+Middleware ek function hota hai jo request aur response ke beech chalta hai.
+Iska use hota hai — authentication, logging, validation, etc. ke liye.
+
+app.use((req, res, next) => {
+  console.log('Request URL:', req.url);
+  next(); // next route ko pass kar deta hai
+});
+
+3️⃣ JSON aur Body Parsing
+
+Express automatically JSON data handle kar sakta hai (frontend se bheja gaya).
+
+app.use(express.json());
+
+app.post('/user', (req, res) => {
+  const data = req.body;
+  res.send(`Hello ${data.name}, your email is ${data.email}`);
+});
+
+
+Agar frontend se ye request aaye:
+
+{
+  "name": "Ritik",
+  "email": "ritik@gmail.com"
+}
+
+
+To output milega:
+
+Hello Ritik, your email is ritik@gmail.com
+
+4️⃣ Static Files Serve Karna
+
+Express se tum HTML, CSS, images jaise static files bhi serve kar sakte ho:
+
+app.use(express.static('public'));
+
+
+Ab agar public folder me index.html hai, to browser me http://localhost:3000 par wo dikhai dega.
+
+5️⃣ Connect MongoDB (Database)
+
+Express ko MongoDB ke sath connect karne ke liye hum Mongoose use karte hain.
+
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/testDB')
+  .then(() => console.log('Database connected'))
+  .catch(err => console.log(err));
+
+🔁 Express.js ke benefits:
+Feature	Description
+🚀 Fast	Lightweight aur optimized framework
+🧩 Easy Routing	Alag-alag URL manage karna simple
+🧠 Middleware	Authentication, logging, etc. easy
+🧰 Integration	MongoDB, MySQL, JWT sab easily connect hota hai
+📦 JSON Support	Frontend se JSON data handle karna simple
+🔹 Summary (Ek Line Me)
+
+Express.js = Node.js ka simplified version jo backend server aur API banana easy bana deta hai.

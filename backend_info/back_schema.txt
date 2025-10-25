@@ -1,0 +1,17 @@
+🧩 Schema kya karta hai?
+
+Schema = Data ka structure / blueprint
+
+Schema batata hai ki ek document (record) ke andar kaun-kaun se fields honge,
+aur unka type (String, Number, Date, Boolean) kya hoga.
+
+
+// Example:
+// const userSchema = new mongoose.Schema({
+//   username: String,
+//   email: String,
+//   password: String
+// });
+
+
+👉 Ye define karta hai ke har user document me ye 3 fields honi chahiye.

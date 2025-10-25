@@ -1,0 +1,16 @@
+{
+  "name": "react-backend1",
+  "version": "1.0.0",
+  "description": "This is basic backend project",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Ritik kumar",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0"
+  }
+}

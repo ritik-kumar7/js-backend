@@ -1,0 +1,20 @@
+🚀 Express.js kya hota hai?
+
+Express.js ek lightweight framework hai Node.js ke upar,
+jiska use hum backend server aur REST API banane ke liye karte hain.
+
+🔹 Simple shabdon me:
+
+Node.js to hume server banane ki basic facility deta hai,
+lekin har cheez manually likhni padti hai (routes, headers, etc.)
+
+Express.js ye sab easy bana deta hai —
+wo ek ready-made structure deta hai jisse hum easily:
+
+server bana sakte hain,
+
+routes handle kar sakte hain,
+
+database connect kar sakte hain,
+
+aur request/response manage kar sakte hain.

@@ -1,0 +1,70 @@
+⚙️ Middleware kya hota hai?
+
+Middleware ek function hota hai jo request (req) aur response (res) ke beech me chalta hai.
+
+🔹 Simple shabdon me:
+
+Jab koi request server par aati hai, to Express usko response dene se pehle
+ek ya ek se zyada middleware functions ke through pass karta hai.
+
+Ye middleware kuch kaam karte hain, jaise:
+
+request ko check karna
+
+user ko authenticate karna
+
+log banana
+
+data modify karna
+
+aur phir request ko aage bhejna
+
+🧠 Ek real-life example:
+
+Soch lo tum ek restaurant me gaye ho 🍽️
+
+Tum (client) → waiter ko order dete ho → waiter (middleware) → kitchen (server).
+
+Waiter:
+
+Tumhara order check karta hai
+
+Dekhta hai sab sahi hai ya nahi
+
+Phir kitchen tak order pahunchata hai
+
+Waise hi Express me middleware bhi request ko check karke aage bhejta hai.
+
+🧩 Basic Example (Custom Middleware)
+const express = require('express');
+const app = express();
+
+// Middleware function
+function logMiddleware(req, res, next) {
+  console.log(`Request received at: ${new Date().toLocaleTimeString()}`);
+  next(); // next route ko pass kar do
+}
+
+// Use middleware globally
+app.use(logMiddleware);
+
+app.get('/', (req, res) => {
+  res.send('Home Page');
+});
+
+app.get('/about', (req, res) => {
+  res.send('About Page');
+});
+
+app.listen(3000, () => {
+  console.log('Server running on port 3000');
+});
+
+
+🧾 Output (terminal me):
+
+Request received at: 12:30:45 PM
+Request received at: 12:30:50 PM
+
+
+Ye middleware har route ke liye chalega, kyunki humne app.use() se global lagaya hai.

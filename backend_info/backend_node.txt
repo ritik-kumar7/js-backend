@@ -1,0 +1,36 @@
+1. Node.js kya hota hai?
+
+Node.js ek JavaScript runtime environment hai
+jisse hum JavaScript ko browser ke bahar, yani server pe run kar sakte hain.
+
+🧠 Simple shabdon me:
+
+Normally JavaScript sirf browser me chalta tha (for frontend).
+Node.js ne ye possible banaya ki hum JavaScript ko backend (server side) me bhi use kar saken.
+
+⚙️ Example:
+// hello.js
+console.log("Hello from Node.js!");
+
+
+Agar tum terminal me likho:
+
+node hello.js
+
+
+To output aayega:
+
+Hello from Node.js!
+
+
+👉 iska matlab: tumne JavaScript code browser ke bahar run kar liya (backend environment me).
+
+💡 Node.js ka use:
+
+Backend server banana
+
+Database ke sath kaam karna
+
+File system handle karna
+
+API create karna

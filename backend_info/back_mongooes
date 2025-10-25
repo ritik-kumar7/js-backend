@@ -1,0 +1,90 @@
+🧩 Mongoose kya hota hai?
+
+Mongoose ek ODM (Object Data Modeling) library hai MongoDB ke liye.
+
+Yani simple shabdon me:
+
+Ye ek bridge (pul) hai jo Express/Node.js aur MongoDB database ke beech connection banata hai.
+
+🧠 Tera samajhna:
+
+“Model ek table/object ho gaya, aur schema uske andar ke values (columns/fields) ho gaye.”
+
+✅ Bilkul theek!
+Bas difference ye hai ki MongoDB NoSQL hai —
+to yahan “table” aur “row” nahi kehte, balki “collection” aur “document” bolte hain.
+
+🧩 Chalo compare karte hain (SQL vs MongoDB):
+SQL Database	MongoDB (Mongoose)
+Table	Collection
+Row	Document
+Column	Field
+Schema	Schema (structure define karta hai)
+Model	Collection ka interface (code me use hota hai)
+🔹 Example samjho:
+🔸 Mongoose me Schema:
+const userSchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  age: Number
+});
+
+
+👉 Yahaan:
+
+name, email, age → ye fields (columns) hain
+
+Ye define karte hain ki document ke andar ka data kaisa hoga
+
+🔸 Model:
+const User = mongoose.model('User', userSchema);
+
+
+👉 Yahaan:
+
+User ek Model hai
+
+Ye MongoDB me ek “users” collection banata hai
+
+Aur uske andar document store karta hai
+
+🔸 Document (Data):
+const newUser = new User({
+  name: "Ritik Kumar",
+  email: "ritik@gmail.com",
+  age: 22
+});
+
+newUser.save();
+
+
+👉 Yahaan:
+
+newUser ek document hai (SQL me “row” jaise)
+
+Ye document users collection (table) ke andar store hoga
+
+Iska structure schema ke hisaab se follow karega
+
+🧠 Simple real-world example:
+
+Soch lo ek “Users” collection hai (table jaise):
+
+name	email	age
+Ritik Kumar	ritik@gmail.com
+	22
+Aman Singh	aman@gmail.com
+	25
+Ab yahaan:
+
+Collection (Users) = Model
+
+Row (ek user ka record) = Document
+
+Column (name, email, age) = Schema ke fields
+
+💬 Ek line me samjho:
+
+🔹 Schema = data ka design / blueprint (structure define karta hai)
+🔹 Model = us design se banta hua collection (code se interact karne ka tarika)
+🔹 Document = actual data (jo MongoDB me save hota hai)
