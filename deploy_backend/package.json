@@ -1,0 +1,12 @@
+{
+  "name": "deploy_backend",
+  "version": "1.0.0",
+  "description": "basic backend project",
+  "main": "server.js",
+  "type":"module",
+  "scripts": {
+    "dev": "node src/server.js"
+  },
+  "author": "ritik",
+  "license": "ISC"
+}
